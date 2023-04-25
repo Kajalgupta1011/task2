@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,12 +8,9 @@ body {
     margin: 0;
 }
 
-.container-fluid {
-    width: 100%;
-}
-
 .container {
     max-width: 1200px;
+    padding: 0 30px;
     margin: 0 auto 0 auto;
     /* background-color: bisque; */
 }
@@ -24,6 +22,7 @@ body {
 
 h2 {
     font-size: 32px;
+    margin-bottom: 15px
 }
 
 p {
@@ -31,12 +30,14 @@ p {
 }
 
 .sec-1 {
-    height: 85vh;
-    /* background-image: url("https://wallpapercave.com/wp/wp9139711.jpg"); */
-    background-image: url("https://via.placeholder.com/500X400");
+    height: 700px;
+    /* background-image: url("https://via.placeholder.com/200X100"); */
+    background: url("https://media.istockphoto.com/id/1283690311/photo/senior-couple-happy-elderly-love-together-retirement-lifestyle-smiling-man-woman-mature.jpg?s=170667a&w=0&k=20&c=Ro1RWIgwzRnogAm5T6vm8hBLO9uHJmIppTMoS_l9KYk=");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .sec-1 a {
@@ -45,25 +46,23 @@ p {
 }
 
 .header {
-    padding: 0 15px 0 15px;
+    padding: 15px 15px 0 15px;
     font-size: 20px;
-    color: grey;
+    color: rgb(75, 75, 75);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5px;
 }
 
 .nav-item {
-    display: flex;
-    margin: 0;
+    display: flex
 }
 
 .nav-item li {
-    padding: 15px;
+    padding: 0 15px;
     cursor: pointer;
 }
 
@@ -80,7 +79,7 @@ p {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #00000092;
+    background-color: #ffffff92;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -89,7 +88,7 @@ p {
 
 .dropdown-content p a {
     text-decoration: none;
-    color: #ffffff;
+    color: rgb(75, 75, 75);
 }
 
 .dropdown:hover .dropdown-content {
@@ -107,53 +106,44 @@ button {
     padding: 10px;
     border-radius: 5px;
     color: #ffff;
+    font-size: 16px;
 }
 
-/* 
 .content {
-    width: 400px;
-    height: 400px;
-    background-color: bisque;
-} */
-.content {
-    width: 400px;
-    height: 400px;
-    /* float: right; */
+    top: 50px;
+    right: 70px;
     position: relative;
-    /* margin: 30px; */
-    margin-right: 50px;
 }
 
 .box {
-    width: 100%;
-    height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    background: #0057e3;
-    text-align: start;
-    padding: 0 20px;
+    width: 400px;
+    right: 0;
+    height: 415px;
+    background-color: #347ff8;
+    opacity: 0.8;
 }
 
 .overlap {
-    z-index: 9;
     margin: 30px;
-    background: #ffffff;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    width: 400px;
+    opacity: 0.7;
+    padding: 0 20px 20px 45px;
+    text-align: start;
 }
 
 /* Section 2 -------------------------------------------- */
 .sec-2 {
-    border: 1px solid rgb(81, 81, 81);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 37%, rgba(255, 255, 255, 0.700717787114846) 76%), url("https://media.istockphoto.com/id/1094440264/photo/three-generation-hispanic-family-standing-in-the-park-smiling-to-camera-selective-focus.jpg?s=612x612&w=0&k=20&c=mvWUYOrNzBtASbr4huFYJHWjkiHxUy1KyFmTGbmkV1A=");
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("https://via.placeholder.com/500x200");
-    background-color: rgba(255, 255, 255, 0.901);/
 }
 
 .sec-2 a {
     color: #0057e3;
-    ;
 }
 
 .two-divs {
@@ -169,28 +159,29 @@ button {
 }
 
 .therapy-section {
-    /* padding-top: 80px; */
-    width: 40%;
+    padding-right: 176px;
+    width: 50%;
     /* background-color: aquamarine; */
-}
-
-.therapy-section p {
-    text-align: start;
-    width: 80%;
 }
 
 .therapy-grid {
     width: 50%;
     /* background-color: chocolate; */
     display: grid;
-    grid-template-columns: 270px 270px;
+    grid-template-columns: 42% 42%;
     gap: 50px;
 
-    justify-content: space-evenly;
+    justify-content: right;
+}
+
+.teens {
+    margin: 0;
+    font-weight: 800;
+    font-size: 25px;
 }
 
 .grid {
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 30px;
     background-color: #ffff;
     box-shadow: 0px 0px 20px rgb(30, 30, 30);
@@ -200,18 +191,23 @@ button {
     font-size: 14px;
 }
 
+.grid a>p {
+    font-size: 18px;
+}
+
 .grid i {
     font-size: 100px;
 }
 
-.grid h3 {
-    margin: 5px 0 5px 0;
+.grid h4 {
+    padding-top: 10px;
     font-size: 25px;
 }
 
 /* section -3 ------------------------------------ */
 .sec-3 {
     display: flex;
+    align-items: center;
     /* background-color: aquamarine; */
     border-bottom: 2px solid rgb(138, 204, 237);
 }
@@ -231,13 +227,14 @@ button {
 }
 
 .side-content {
-    width: 60%;
+    width: 70%;
     margin: auto;
-    padding: 150px 0;
+    padding: 100px 0px;
 }
 
 h3 {
-    margin-bottom: 0;
+    padding-bottom: 15px;
+    margin: 0;
     font-style: italic;
     font-weight: 100;
 }
@@ -248,23 +245,23 @@ h3 {
 
 .purple,
 .green {
-    height: 2px;
-    margin: 0;
-    float: left;
+    height: 5px;
+    margin: 0px 0 5px;
+    /* margin: auto; */
 }
 
 .purple {
-    width: 100px;
+    width: 14%;
     background-color: purple;
 }
 
 .green {
-    width: 50px;
+    width: 7%;
     background-color: green;
 }
 
 .highligh {
-    text-align: center;
+    text-align: start;
     margin-left: -15px;
     display: flex;
     /* background-color: #9cbef6; */
@@ -274,12 +271,15 @@ h3 {
 
 .fa-sharp {
     font-size: 100px;
-    margin-right: 20px;
+    padding-right: 20px;
+    /* margin-right: 20px; */
+    margin: 0;
 }
 
 /* section-4------------------------ */
 .sec-4 {
-    background-image: url("https: //via.placeholder.com/500x500");
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 0.7063200280112045) 58%, rgba(255, 255, 255, 1) 100%), url("https://thumbs.dreamstime.com/b/happy-elderly-couple-11298300.jpg");
+    /* background-image: url("https: //via.placeholder.com/500x500"); */
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -287,29 +287,121 @@ h3 {
 
 .section-4 {
     display: flex;
+    /* background-color: antiquewhite; */
+    padding: 140px 30px;
+    justify-content: space-between;
 }
 
 .client {
+    /* background-color: aqua; */
+    padding: 0 101px 0 0;
     width: 50%;
 }
 
 .client h2 {
-    margin: 0;
+    margin-top: 0;
 }
 
+
 .card-section {
+    /* background-color: aquamarine; */
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(30, 30, 30, 0.808);
+    width: 45%;
+}
+
+.card {
+    padding: 25px 95px 50px 56px;
+    /* background-color: brown; */
+    color: rgb(172, 193, 231);
+
+}
+
+.card>p {
+    padding-left: 50px;
+    margin-top: -50px;
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    font-style: italic;
+}
+
+.outOfBorder {
+    padding: 10px 0;
+    width: 100%;
+    /* background-color: coral; */
+    display: flex;
+    border-top: 3px solid rgb(88, 88, 88);
+}
+
+.outOfBorder>* {
+    margin: auto 10px;
+}
+
+.outOfBorder img {
+    border-radius: 50%;
+}
+
+/* section 5 ------------------------------------------------------- */
+.sec-5 {
+    background-color: rgb(237, 206, 241);
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 30px 60px 30px;
+    align-items: center;
+}
+
+.note-section {
     width: 50%;
+}
+
+.note h2 {
+    font-size: 22px;
+    color: purple;
+    margin-bottom: 0;
+}
+
+.note p {
+    margin-top: 5px;
+}
+
+.email {
+    width: 25%;
+}
+
+.inputs {
+    background-color: #ffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs button {
+    color: black;
+    border-radius: 0;
+    background-color: rgb(142, 107, 142);
+}
+
+input {
+    width: 65%;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
 }
 
 @media only screen and (max-width: 767px) {
     .nav-links {
         position: absolute;
         width: 100%;
-        background-color: #00000099;
+        background-color: #ffffff99;
         top: 75px;
-        color: #ffffff;
+        color: #545454;
         display: none;
         left: 0px;
+        z-index: 9;
     }
 
     .show {
@@ -317,7 +409,11 @@ h3 {
     }
 
     .nav-links a {
-        color: #ffffff;
+        color: #474747;
+    }
+
+    .nav-item li {
+        padding: 10px 15px;
     }
 
     .nav-item {
@@ -328,10 +424,10 @@ h3 {
     .dropdown-content {
         display: none;
         /* position: absolute; */
-        background-color: #000000d0;
+        background-color: #ffffffd0;
         min-width: 100px;
         box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
-        /* z-index: 1; */
+        /* z-index: 9; */
         top: 20px;
         left: 100px;
         text-align: center;
@@ -344,7 +440,7 @@ h3 {
 
     .dropdown-content p a {
         text-decoration: none;
-        color: #ffffff;
+        color: #353535;
     }
 
     .navbtn {
@@ -353,5 +449,121 @@ h3 {
 
     .navbtn .fa-xmark {
         display: none;
+    }
+
+    /* section2-------------------- */
+    .two-divs,
+    .footer {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .therapy-section,
+    .therapy-grid {
+        padding: 40px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sec-3,
+    .section-4 {
+        flex-direction: column;
+    }
+
+    .image,
+    .section-3,
+    .note-section {
+        width: 100%;
+    }
+
+    .note-section {
+        padding-bottom: 30px;
+    }
+
+    .email {
+        width: 65%;
+    }
+
+    .client {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .client,
+    .card-section {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .two-divs {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .therapy-section,
+    .therapy-grid {
+        padding: 40px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .therapy-section {
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .content {
+        top: 50px;
+        left: 40px;
+        position: relative;
+    }
+
+    .box,
+    .overlap {
+        left: 0;
+    }
+
+    .overlap {
+        padding: 0 45px 20px 20px;
+    }
+
+    .therapy-grid {
+        width: 100%;
+        /* background-color: chocolate; */
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 50px;
+
+        justify-content: left;
+    }
+
+    .section-4 {
+        padding: 70px 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .box {
+        width: 200px;
+        height: 450px;
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .freeConsult {
+        font-size: 14px;
+    }
+
+    .box p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .box button {
+        font-size: 14px;
     }
 }
