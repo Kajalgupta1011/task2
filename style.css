@@ -116,30 +116,35 @@ button {
     -webkit-box-orient: vertical;
     overflow: hidden;
 } */
+.overlap-cards {
+    background-color: #be0000;
+}
 
 .content {
-    background-color: #0057e3;
-    padding: 0 30px;
-    top: 40px;
-    right: 50px;
     position: relative;
 }
 
 .box {
+    padding: 30px 50px 30px 10px;
+    text-align: start;
+    top: 30px;
+    right: 60px;
     position: absolute;
-    width: 500px;
-    right: 0;
-    height: 420px;
-    background-color: #347ff8;
+    max-width: 450px;
+    background-color: #0057e3;
     opacity: 0.8;
 }
 
-.overlap {
-    margin: 30px;
-
-    background-color: #ffffff;
-    padding: 20px 20px 20px 45px;
-    text-align: start;
+.box::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 450px;
+    height: 430px;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    opacity: 0.9;
 }
 
 /* Section 2 -------------------------------------------- */
@@ -175,7 +180,7 @@ button {
     width: 50%;
     /* background-color: chocolate; */
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
     justify-content: right;
 }
@@ -222,7 +227,7 @@ button {
 
 .image img {
     width: 100%;
-    height: 100%;
+    object-fit: cover;
 }
 
 .section-3 {
@@ -249,18 +254,18 @@ h3 {
 
 .purple,
 .green {
-    height: 5px;
+    height: 3px;
     margin: 0px 0 5px;
     /* margin: auto; */
 }
 
 .purple {
-    width: 14%;
+    width: 16%;
     background-color: purple;
 }
 
 .green {
-    width: 7%;
+    width: 9%;
     background-color: green;
 }
 
@@ -397,6 +402,7 @@ input {
 }
 
 @media only screen and (max-width: 767px) {
+
     .nav-links {
         position: absolute;
         width: 100%;
@@ -408,12 +414,145 @@ input {
         z-index: 9;
     }
 
-    .box h2 {
-        font-size: 28px;
+
+    .fa-sharp {
+        font-size: 70px;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .nav-links a {
+        color: #474747;
+    }
+
+    .nav-item li {
+        padding: 10px 15px;
+    }
+
+    .nav-item {
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .dropdown-content {
+        display: none;
+        /* position: absolute; */
+        background-color: #ffffffd0;
+        min-width: 100px;
+        box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
+        /* z-index: 9; */
+        top: 20px;
+        left: 100px;
+        text-align: center;
+    }
+
+    .dropdown:hover .fa-caret-down {
+        transform: rotate(-90deg);
+        transition: ease 1s;
+    }
+
+    .dropdown-content p a {
+        text-decoration: none;
+        color: #353535;
+    }
+
+    .navbtn {
+        display: block;
+        font-size: 30px;
+    }
+
+    .navbtn .fa-xmark {
+        display: none;
     }
 
     .sec-1 {
-        height: 630px;
+        height: 750px;
+    }
+
+    /* section2-------------------- */
+    .two-divs,
+    .footer {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .therapy-section,
+    .therapy-grid {
+        padding: 0px 0 40px 0;
+        width: 100%;
+    }
+
+
+    .section-4 {
+        flex-direction: column;
+    }
+
+    .sec-3 {
+        flex-direction: column-reverse;
+    }
+
+    .section-4 {
+        padding: 50px 30px;
+    }
+
+    .image,
+    .section-3,
+    .note-section,
+    .side-content,
+    .email {
+        width: 100%;
+    }
+
+    .side-content {
+        padding: 40px 30px;
+        max-width: 100%;
+    }
+
+    .note-section {
+        padding-bottom: 30px;
+    }
+
+
+    .client {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .client,
+    .card-section {
+        width: 100%;
+    }
+
+    .therapy-grid {
+        width: 100%;
+        grid-template-columns: 100%;
+    }
+
+    .box {
+        left: 30px;
+        padding: 38px 0px 32px 60px;
+    }
+
+    .box::after {
+        left: 30px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .nav-links {
+        position: absolute;
+        width: 100%;
+        background-color: #ffffff99;
+        top: 75px;
+        color: #545454;
+        display: none;
+        left: 0px;
+        z-index: 9;
     }
 
     .fa-sharp {
@@ -468,85 +607,6 @@ input {
         display: none;
     }
 
-    /* section2-------------------- */
-    .two-divs,
-    .footer {
-        flex-direction: column;
-        align-items: normal;
-    }
-
-    .therapy-section,
-    .therapy-grid {
-        padding: 0px 0 40px 0;
-        width: 100%;
-    }
-
-    .sec-3,
-    .section-4 {
-        flex-direction: column;
-    }
-
-    .section-4 {
-        padding: 50px 30px;
-    }
-
-    .image,
-    .section-3,
-    .note-section,
-    .side-content,
-    .email {
-        width: 100%;
-    }
-
-    .side-content {
-        padding: 40px 30px;
-        max-width: 100%;
-    }
-
-    .note-section {
-        padding-bottom: 30px;
-    }
-
-
-    .client {
-        padding-right: 0;
-        padding-bottom: 50px;
-    }
-
-    .client,
-    .card-section {
-        width: 100%;
-    }
-
-    .therapy-grid {
-        width: 100%;
-        grid-template-columns: 100%;
-    }
-
-    .box {
-        width: 70%;
-        height: 450px;
-    }
-
-    .content {
-        right: 30px;
-    }
-
-    .overlap p {
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-}
-
-
-@media only screen and (min-width:768px) and (max-width:1024px) {
-
-    .sec-1 {
-        height: 600px;
-    }
-
     .client {
         padding: 0 30px 0 0;
     }
@@ -569,14 +629,12 @@ input {
         position: relative;
     }
 
-    .box {
-        width: 500px;
-        height: 420px;
+    .two-divs {
+        flex-direction: column;
     }
 
-    .two-divs,
     .sec-3 {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .section-3,
@@ -601,5 +659,20 @@ input {
         grid-template-columns: 45% 45%;
         gap: 50px;
         justify-content: space-between;
+    }
+
+    .box {
+        top: 0;
+        right: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    /* .sec-1 {
+        height: 930px;
+    } */
+
+    .box h2 {
+        font-size: 28px;
     }
 }
