@@ -115,6 +115,7 @@ button {
 } */
 .overlap-cards {
     background-color: #be0000;
+    padding-left: 80px;
 }
 
 .content {
@@ -529,12 +530,11 @@ input {
     }
 
     .box {
-        left: 30px;
-        padding: 38px 0px 32px 60px;
+        right: 30px;
     }
 
     .box::after {
-        left: 30px;
+        right: 30px;
         width: 100%;
         height: 100%;
     }
