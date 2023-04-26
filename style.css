@@ -35,9 +35,6 @@ p {
     background: url("https://media.istockphoto.com/id/1283690311/photo/senior-couple-happy-elderly-love-together-retirement-lifestyle-smiling-man-woman-mature.jpg?s=170667a&w=0&k=20&c=Ro1RWIgwzRnogAm5T6vm8hBLO9uHJmIppTMoS_l9KYk=");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 
 .sec-1 a {
@@ -669,9 +666,9 @@ input {
 }
 
 @media only screen and (max-width: 320px) {
-    /* .sec-1 {
-        height: 930px;
-    } */
+    .sec-1 {
+        height: 830px;
+    }
 
     .box h2 {
         font-size: 28px;
