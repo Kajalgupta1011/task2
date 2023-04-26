@@ -107,12 +107,6 @@ button {
     cursor: pointer;
 }
 
-/* .overlap p {
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-} */
 .overlap-cards {
     background-color: #be0000;
     padding-left: 80px;
@@ -123,12 +117,12 @@ button {
 }
 
 .box {
-    padding: 30px 50px 30px 10px;
+    padding: 60px 50px 30px 10px;
     text-align: start;
     top: 30px;
     right: 60px;
     position: absolute;
-    max-width: 450px;
+    max-width: 550px;
     background-color: #0057e3;
     opacity: 0.8;
 }
@@ -138,11 +132,10 @@ button {
     position: absolute;
     top: 30px;
     right: 30px;
-    width: 450px;
-    height: 430px;
+    width: 550px;
+    height: 100%;
     background-color: rgb(255, 255, 255);
     z-index: -1;
-    opacity: 0.9;
 }
 
 /* Section 2 -------------------------------------------- */
@@ -667,7 +660,7 @@ input {
 
 @media only screen and (max-width: 320px) {
     .sec-1 {
-        height: 830px;
+        height: 930px;
     }
 
     .box h2 {
