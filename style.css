@@ -31,7 +31,8 @@ p {
 }
 
 .sec-1 {
-    height: 600px;
+    padding: 0px 30px;
+    /* height: 600px; */
     background: url("https://media.istockphoto.com/id/1283690311/photo/senior-couple-happy-elderly-love-together-retirement-lifestyle-smiling-man-woman-mature.jpg?s=170667a&w=0&k=20&c=Ro1RWIgwzRnogAm5T6vm8hBLO9uHJmIppTMoS_l9KYk=");
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +44,7 @@ p {
 }
 
 .header {
-    padding: 15px 15px 0 15px;
+    padding: 15px 0px 0 0px;
     font-size: 20px;
     color: rgb(75, 75, 75);
 }
@@ -108,34 +109,37 @@ button {
 }
 
 .overlap-cards {
-    background-color: #be0000;
-    padding-left: 80px;
-}
-
-.content {
+    display: flex;
+    /* margin: auto; */
+    justify-content: right;
+    padding: 60px 50px 60px 0;
+    /* max-width: 1880px; */
     position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
 }
 
 .box {
-    padding: 60px 50px 30px 10px;
-    text-align: start;
-    top: 30px;
-    right: 60px;
-    position: absolute;
-    max-width: 550px;
-    background-color: #0057e3;
-    opacity: 0.8;
+    /* margin-top: 50px; */
+    max-width: 500px;
+    /* min-height: 300px; */
+    padding: 30px 25px 60px 36px;
+    background-color: #ffffffc9;
+    position: relative;
 }
+
 
 .box::after {
     content: "";
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 550px;
+    width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(48, 147, 240, 0.863);
+    position: absolute;
+    /* top: -40px; */
+    /* left: 40px; */
     z-index: -1;
+    top: -30px;
+    left: 26px;
 }
 
 /* Section 2 -------------------------------------------- */
@@ -164,12 +168,10 @@ button {
 .therapy-section {
     padding-right: 176px;
     width: 50%;
-    /* background-color: aquamarine; */
 }
 
 .therapy-grid {
     width: 50%;
-    /* background-color: chocolate; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -201,7 +203,7 @@ button {
     font-size: 100px;
 }
 
-.grid h4 {
+.grid h3 {
     padding-top: 10px;
     font-size: 25px;
 }
@@ -233,7 +235,7 @@ button {
     padding: 100px 129px 100px 120px;
 }
 
-h3 {
+h4 {
     padding-bottom: 15px;
     margin: 0;
     font-style: italic;
@@ -248,7 +250,6 @@ h3 {
 .green {
     height: 3px;
     margin: 0px 0 5px;
-    /* margin: auto; */
 }
 
 .purple {
@@ -265,7 +266,6 @@ h3 {
     text-align: start;
     margin-left: -15px;
     display: flex;
-    /* background-color: #9cbef6; */
     font-style: italic;
     color: #889cb1d5;
 }
@@ -273,7 +273,6 @@ h3 {
 .fa-sharp {
     font-size: 100px;
     padding-right: 20px;
-    /* margin-right: 20px; */
     margin: 0;
 }
 
@@ -288,13 +287,11 @@ h3 {
 
 .section-4 {
     display: flex;
-    /* background-color: antiquewhite; */
     padding: 140px 30px;
     justify-content: space-between;
 }
 
 .client {
-    /* background-color: aqua; */
     padding: 0 101px 0 0;
     width: 50%;
 }
@@ -305,7 +302,6 @@ h3 {
 
 
 .card-section {
-    /* background-color: aquamarine; */
     background-color: white;
     box-shadow: 0px 0px 20px rgba(30, 30, 30, 0.808);
     width: 45%;
@@ -313,7 +309,6 @@ h3 {
 
 .card {
     padding: 25px 95px 50px 56px;
-    /* background-color: brown; */
     color: rgb(172, 193, 231);
 
 }
@@ -329,7 +324,6 @@ h3 {
 .outOfBorder {
     padding: 10px 0;
     width: 100%;
-    /* background-color: coral; */
     display: flex;
     border-top: 3px solid rgb(88, 88, 88);
 }
@@ -340,6 +334,15 @@ h3 {
 
 .outOfBorder img {
     border-radius: 50%;
+}
+
+.hr {
+    width: 50px;
+    height: 2px;
+    background-color: rgb(88, 88, 88);
+    transform: rotate(90deg);
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* section 5 ------------------------------------------------------- */
@@ -393,7 +396,13 @@ input {
     border: none;
 }
 
+
+
 @media only screen and (max-width: 767px) {
+
+    .box {
+        max-width: 450px;
+    }
 
     .nav-links {
         position: absolute;
@@ -459,10 +468,6 @@ input {
         display: none;
     }
 
-    .sec-1 {
-        height: 750px;
-    }
-
     /* section2-------------------- */
     .two-divs,
     .footer {
@@ -522,15 +527,42 @@ input {
         grid-template-columns: 100%;
     }
 
-    .box {
-        right: 30px;
+    .box h1 {
+        font-size: 27px;
     }
 
-    .box::after {
-        right: 30px;
-        width: 100%;
-        height: 100%;
+    .box p {
+        font-size: 14px;
+
     }
+
+    .card {
+        padding: 25px 30px;
+    }
+
+    .card>p {
+        padding-left: 30px;
+    }
+
+    .outOfBorder {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .outOfBorder>img,
+    .outOfBorder>p {
+        padding: 5px 0;
+    }
+
+    .hr {
+        width: 40%;
+        transform: rotate(0deg);
+    }
+
+    .overlap-cards {
+        padding: 60px 30px 60px 0;
+    }
+
 }
 
 
@@ -614,35 +646,18 @@ input {
         padding: 25px 39px 45px 30px;
     }
 
-    .content {
-        top: 20px;
-        right: 50px;
-        position: relative;
-    }
-
     .two-divs {
         flex-direction: column;
     }
 
-    .sec-3 {
-        flex-direction: column-reverse;
+    .side-content {
+        padding: 50px 30px;
     }
 
-    .section-3,
-    .image,
-    .side-content {
-        width: 100%;
-    }
-
-    .side-content {
-        padding: 100px 40px;
-        max-width: 100%;
-    }
 
     .therapy-section {
         padding: 0 0 50px 0;
         width: 100%;
-        /* background-color: aquamarine; */
     }
 
     .therapy-grid {
@@ -652,18 +667,6 @@ input {
         justify-content: space-between;
     }
 
-    .box {
-        top: 0;
-        right: 30px;
-    }
-}
 
-@media only screen and (max-width: 320px) {
-    .sec-1 {
-        height: 930px;
-    }
 
-    .box h2 {
-        font-size: 28px;
-    }
 }
