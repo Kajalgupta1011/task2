@@ -77,11 +77,15 @@ p {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff92;
+    background-color: #ffffffeb;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     top: 49px;
+}
+
+.dropdown-content p {
+    padding-left: 20px;
 }
 
 .dropdown-content ul li a {
@@ -90,6 +94,7 @@ p {
 }
 
 .dropdown:hover .dropdown-content {
+    z-index: 5;
     display: block;
 }
 
@@ -123,7 +128,7 @@ button {
     /* margin-top: 50px; */
     max-width: 500px;
     /* min-height: 300px; */
-    padding: 30px 25px 60px 36px;
+    padding: 30px 25px 50px 36px;
     background-color: #ffffffc9;
     position: relative;
 }
@@ -206,6 +211,7 @@ button {
 .grid h3 {
     padding-top: 10px;
     font-size: 25px;
+    font-weight: 700;
 }
 
 /* section -3 ------------------------------------ */
@@ -316,7 +322,8 @@ h4 {
 .card>p {
     padding-left: 50px;
     margin-top: -50px;
-    color: rgb(104, 104, 104);
+    color: #353535;
+    /* color: rgb(104, 104, 104); */
     font-size: 18px;
     font-style: italic;
 }
@@ -325,19 +332,23 @@ h4 {
     padding: 10px 0;
     width: 100%;
     display: flex;
+    align-items: center;
     border-top: 3px solid rgb(88, 88, 88);
 }
 
-.outOfBorder>* {
-    margin: auto 10px;
-}
-
 .outOfBorder img {
+    padding: 0px 10px;
     border-radius: 50%;
 }
 
+
+
+.outOfBorder p:last-child {
+    color: rgb(178, 177, 177);
+}
+
 .hr {
-    width: 50px;
+    width: 40px;
     height: 2px;
     background-color: rgb(88, 88, 88);
     transform: rotate(90deg);
@@ -362,8 +373,7 @@ h4 {
     width: 50%;
 }
 
-.note h2 {
-    font-size: 22px;
+.note>h3 {
     color: purple;
     margin-bottom: 0;
 }
@@ -394,11 +404,45 @@ input {
     font-size: 15px;
     padding: 10px;
     border: none;
+    outline: none;
 }
 
 
 
 @media only screen and (max-width: 767px) {
+    input {
+        font-size: 13px;
+    }
+
+    .inputs button {
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .grid h3,
+    h3 {
+        font-size: 18px;
+    }
+
+    .grid p {
+        font-size: 12px;
+    }
+
+    .grid :last-child {
+        font-size: 14px;
+    }
+
+    .freeConsult {
+        font-size: 16px;
+    }
 
     .box {
         max-width: 450px;
@@ -407,7 +451,7 @@ input {
     .nav-links {
         position: absolute;
         width: 100%;
-        background-color: #ffffff99;
+        background-color: #ffffffe5;
         top: 75px;
         color: #545454;
         display: none;
@@ -415,6 +459,9 @@ input {
         z-index: 9;
     }
 
+    .dropdown-content p {
+        padding-right: 20px;
+    }
 
     .fa-sharp {
         font-size: 70px;
@@ -440,7 +487,7 @@ input {
     .dropdown-content {
         display: none;
         /* position: absolute; */
-        background-color: #ffffffd0;
+        background-color: #ffffffe8;
         min-width: 100px;
         box-shadow: 0px 0px 5px 0px rgb(255, 255, 255);
         /* z-index: 9; */
@@ -531,10 +578,6 @@ input {
         font-size: 27px;
     }
 
-    .box p {
-        font-size: 14px;
-
-    }
 
     .card {
         padding: 25px 30px;
@@ -542,25 +585,23 @@ input {
 
     .card>p {
         padding-left: 30px;
+        font-size: 16px
     }
 
     .outOfBorder {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .outOfBorder>img,
-    .outOfBorder>p {
         padding: 5px 0;
     }
 
-    .hr {
-        width: 40%;
-        transform: rotate(0deg);
+    .outOfBorder>p {
+        font-size: 12px;
     }
 
     .overlap-cards {
         padding: 60px 30px 60px 0;
+    }
+
+    button {
+        font-size: 14px;
     }
 
 }
@@ -643,7 +684,12 @@ input {
     }
 
     .card {
-        padding: 25px 39px 45px 30px;
+        padding: 25px 35px 40px 25px;
+    }
+
+    .card>p {
+        padding-left: 27px;
+        margin-top: -39px;
     }
 
     .two-divs {
